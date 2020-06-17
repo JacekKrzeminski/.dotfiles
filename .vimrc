@@ -203,11 +203,13 @@ let g:syntastic_check_on_wq = 0
 " let g:syntastic_aggregate_errors = 1
 let g:syntastic_reuse_loc_lists = 0
 let g:syntastic_python_checkers = ['pylint']
+let g:syntastic_python_pylint_args = "-E"
 " python is checked on file write but other files on :SyntasticCheck
 let g:syntastic_mode_map = {
     \ "mode": "passive",
     \ "active_filetypes": ["python"],
     \ "passive_filetypes": [] }
+nmap <leader>s :SyntasticReset<cr>
 
 
 " **********************************************************
