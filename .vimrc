@@ -67,6 +67,7 @@ set smarttab
 "Highlighting of search result.
 set hls
 set incsearch
+nnoremap <silent> ,<space> :nohlsearch<CR>
 
 "Ignore case when searching.
 set ignorecase  
