@@ -115,6 +115,8 @@ set display=lastline
 "the possible matches are shown just above the command line.
 set wildmenu
 set wildmode=list:longest,full
+" Files to ignore
+set wildignore=*.o,*~,*.pyc
 
 
 "Allows pattern matching with special characters
