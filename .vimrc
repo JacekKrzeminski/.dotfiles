@@ -67,7 +67,6 @@ set smarttab
 "Highlighting of search result.
 set hls
 set incsearch
-nnoremap <silent> ,<space> :nohlsearch<CR>
 
 "Ignore case when searching.
 set ignorecase  
@@ -106,6 +105,7 @@ set scrolloff=1
 "As much as possible of the last line in a window will be displayed.
 set display=lastline
 
+
 " **********************************************************
 " Completion
 " **********************************************************
@@ -140,6 +140,7 @@ let g:mapleader = ","
 
 " Fast saving
 nmap <leader>w :w!<cr>
+nnoremap <leader>b :ls<CR>
 
 
 " When vimrc is edited, reload it
@@ -149,7 +150,7 @@ nmap <leader>w :w!<cr>
 "set whichwrap+=<,>,h,l
 
 " Toggle highlight of the last search result
-nnoremap <F3> :set hlsearch!<CR>
+nnoremap <leader>h :set hlsearch!<CR>
 
 
 " **********************************************************
@@ -219,6 +220,12 @@ nmap <leader>s :SyntasticReset<cr>
 let g:ycm_show_diagnostics_ui = 0
 " called function signature help
 let g:ycm_auto_trigger = 1
+
+
+" **********************************************************
+" fzf
+" **********************************************************
+nnoremap <leader>f :Files<CR>
 
 " **********************************************************
 " plug
