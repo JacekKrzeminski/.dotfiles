@@ -140,7 +140,6 @@ let g:mapleader = ","
 
 " Fast saving
 nmap <leader>w :w!<cr>
-nnoremap <leader>b :ls<CR>
 
 
 " When vimrc is edited, reload it
@@ -276,6 +275,11 @@ let g:ycm_auto_trigger = 1
 nnoremap <leader>f :Files<CR>
 
 " **********************************************************
+" CurtineIncSw switch between foo.c and foo.h
+" **********************************************************
+nnoremap <leader>c :call CurtineIncSw()<CR>
+
+" **********************************************************
 " plug
 " **********************************************************
 call plug#begin('~/.vim/plugged')
@@ -284,4 +288,6 @@ Plug 'ycm-core/YouCompleteMe'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'joe-skb7/cscope-maps'
+Plug 'ericcurtin/CurtineIncSw.vim'
+Plug 'jeetsukumaran/vim-buffergator'
 call plug#end()
