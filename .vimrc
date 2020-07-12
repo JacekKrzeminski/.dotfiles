@@ -92,6 +92,15 @@ set bg=dark
 colorscheme torte
 set gfn=Liberation\ Mono\ 11
 
+set termguicolors
+" This is only necessary if you use "set termguicolors".
+let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+" fixes glitch? in colors when using vim with tmux
+set background=dark
+set t_Co=256
+
+
 "How many tenths of a second to blink.
 set mat=2
 
