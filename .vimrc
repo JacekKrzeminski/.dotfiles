@@ -273,6 +273,7 @@ let g:ycm_auto_trigger = 1
 " fzf
 " **********************************************************
 nnoremap <leader>f :Files<CR>
+nnoremap <leader>b :Buffers<CR>
 
 " **********************************************************
 " CurtineIncSw switch between foo.c and foo.h
@@ -289,5 +290,4 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'joe-skb7/cscope-maps'
 Plug 'ericcurtin/CurtineIncSw.vim'
-Plug 'jeetsukumaran/vim-buffergator'
 call plug#end()
