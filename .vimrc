@@ -283,6 +283,7 @@ let g:ycm_auto_trigger = 1
 " **********************************************************
 nnoremap <leader>f :Files<CR>
 nnoremap <leader>b :Buffers<CR>
+nnoremap <leader>a :Ag<CR>
 
 " **********************************************************
 " CurtineIncSw switch between foo.c and foo.h
