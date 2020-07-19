@@ -135,12 +135,6 @@ set magic
 set undodir=~/.vim/undodir
 set undofile
 
-" ctags
-" It means 'look for a tags file in the directory of the current file, then upward 
-" until / and in the working directory, then upward until /".
-set tags=./tags;,tags;
-
-
 " **********************************************************
 " Key shortcuts
 " **********************************************************
@@ -149,6 +143,13 @@ let g:mapleader = ","
 
 " Fast saving
 nmap <leader>w :w!<cr>
+
+" ctags
+" It means 'look for a tags file in the directory of the current file, then
+" in the working directory, then upward until /".
+" :echo tagfiles() to display tags file currently in use.
+set tags=./tags;,tags;
+nnoremap <silent> <leader>t :TagbarToggle<cr>
 
 
 " When vimrc is edited, reload it
@@ -288,7 +289,9 @@ nnoremap <leader>a :Ag<CR>
 " **********************************************************
 " CurtineIncSw switch between foo.c and foo.h
 " **********************************************************
-nnoremap <leader>c :call CurtineIncSw()<CR>
+autocmd FileType c,cpp nnoremap <leader>c :call CurtineIncSw()<CR>
+
+
 
 " **********************************************************
 " plug
@@ -300,4 +303,6 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'joe-skb7/cscope-maps'
 Plug 'ericcurtin/CurtineIncSw.vim'
+Plug 'majutsushi/tagbar'
+Plug 'tpope/vim-commentary'
 call plug#end()
