@@ -286,9 +286,13 @@ nmap <leader>s :SyntasticReset<cr>
 " youcompleteme
 " **********************************************************
 " report errors, conflicts with syntastic
-let g:ycm_show_diagnostics_ui = 0
+" let g:ycm_show_diagnostics_ui = 0
 " called function signature help
-let g:ycm_auto_trigger = 1
+let g:ycm_add_preview_to_completeopt=1
+let g:ycm_autoclose_preview_window_after_completion=1
+let g:ycm_autoclose_preview_window_after_insertion=1
+let g:ycm_min_num_of_chars_for_completion=3
+let g:ycm_auto_hover=0
 
 
 " **********************************************************
