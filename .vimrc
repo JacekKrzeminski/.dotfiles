@@ -55,10 +55,10 @@ set cinoptions=:0,b1,g0,+4,(4,u2,w1
 filetype plugin indent on
 
 "How many columns a tab counts for.
-set tabstop=2
+set tabstop=4
 
 "How many columns text is indented with the reindent operations (<< and >>).
-set shiftwidth=2
+set shiftwidth=4
 
 " Use spaces rather than tabs.
 set expandtab
@@ -108,6 +108,8 @@ set t_Co=256
 
 "How many tenths of a second to blink.
 set mat=2
+
+autocmd BufRead,BufNewFile *.py let python_highlight_all=1
 
 " **********************************************************
 " Navigation
@@ -267,10 +269,9 @@ let g:syntastic_check_on_wq = 0
 let g:syntastic_reuse_loc_lists = 0
 let g:syntastic_python_checkers = ['pylint']
 let g:syntastic_python_pylint_args = "-E"
-" python is checked on file write but other files on :SyntasticCheck
 let g:syntastic_mode_map = {
     \ "mode": "passive",
-    \ "active_filetypes": ["python"],
+    \ "active_filetypes": [],
     \ "passive_filetypes": [] }
 nmap <leader>s :SyntasticReset<cr>
 
