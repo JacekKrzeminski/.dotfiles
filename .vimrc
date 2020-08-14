@@ -121,6 +121,12 @@ set scrolloff=1
 "As much as possible of the last line in a window will be displayed.
 set display=lastline
 
+"split navigations
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
 
 " **********************************************************
 " Completion
