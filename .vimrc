@@ -318,3 +318,19 @@ Plug 'ericcurtin/CurtineIncSw.vim'
 Plug 'majutsushi/tagbar'
 Plug 'tpope/vim-commentary'
 call plug#end()
+
+" Flag unnecessary whitespace.
+highlight BadWhitespace ctermbg=red guibg=red
+noremap <Leader>m :call MatchBlanksToggle()<CR>
+
+fun! MatchBlanksToggle()
+    if exists("t:match_blanks")
+        unlet t:match_blanks
+        match none
+    else
+        let t:match_blanks = 1
+        match BadWhitespace /\s\+$/
+    endif
+endf
+
+au BufRead,BufNewFile,BufWritePost *.py,*.pyw,*.c,*.h,*.cc,*.cpp,*.hh,*.hpp :call MatchBlanksToggle()
