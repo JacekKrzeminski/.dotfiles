@@ -33,6 +33,11 @@ set encoding=utf-8
 "Wrap long lines at breakat character
 set linebreak
 
+set foldmethod=indent
+" Hack to open all (in practice) the folds.
+set foldlevel=99
+
+
 " **********************************************************
 " Tabs and indentation
 " **********************************************************
