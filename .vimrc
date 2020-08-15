@@ -359,6 +359,7 @@ Plug 'tpope/vim-commentary'
 Plug 'junegunn/seoul256.vim'
 Plug 'junegunn/goyo.vim'
 Plug 'terryma/vim-expand-region'
+Plug 'tpope/vim-fugitive'
 call plug#end()
 
 
