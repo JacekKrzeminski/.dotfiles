@@ -190,8 +190,8 @@ let g:netrw_altv = 1
 let g:netrw_winsize = 15
 let g:netrw_list_hide = &wildignore
 let g:netrw_preview=1
-noremap <Leader><Tab> :call VexToggle(getcwd())<CR>
-noremap <Leader>` :call VexToggle("")<CR>
+noremap <leader><Tab> :call VexToggle(getcwd())<CR>
+noremap <leader>` :call VexToggle("")<CR>
 
 
 " http://ivanbrennan.nyc/2014-01-16/rigging-vims-netrw
@@ -325,7 +325,7 @@ call plug#end()
 
 " Flag unnecessary whitespace.
 highlight BadWhitespace ctermbg=red guibg=red
-noremap <Leader>m :call MatchBlanksToggle()<CR>
+noremap <leader>m :call MatchBlanksToggle()<CR>
 
 fun! MatchBlanksToggle()
     if exists("t:match_blanks")
