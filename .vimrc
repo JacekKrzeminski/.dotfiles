@@ -352,6 +352,15 @@ Plug 'junegunn/goyo.vim'
 Plug 'terryma/vim-expand-region'
 call plug#end()
 
+
+" **********************************************************
+" seoul256 color scheme
+" **********************************************************
+let g:seoul256_background = 233
+let g:seoul256_srgb = 1
+colorscheme seoul256
+
+
 " Flag unnecessary whitespace.
 highlight BadWhitespace ctermbg=red guibg=red
 noremap <leader>m :call MatchBlanksToggle()<CR>
@@ -368,10 +377,3 @@ endf
 
 au BufRead,BufNewFile,BufWritePost *.py,*.pyw,*.c,*.h,*.cc,*.cpp,*.hh,*.hpp :call MatchBlanksToggle()
 
-
-" **********************************************************
-" seoul256 color scheme
-" **********************************************************
-let g:seoul256_background = 233
-let g:seoul256_srgb = 1
-colorscheme seoul256
