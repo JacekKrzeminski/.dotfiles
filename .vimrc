@@ -349,6 +349,7 @@ Plug 'majutsushi/tagbar'
 Plug 'tpope/vim-commentary'
 Plug 'junegunn/seoul256.vim'
 Plug 'junegunn/goyo.vim'
+Plug 'terryma/vim-expand-region'
 call plug#end()
 
 " Flag unnecessary whitespace.
