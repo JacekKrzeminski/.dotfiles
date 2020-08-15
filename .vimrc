@@ -292,7 +292,16 @@ let g:ycm_autoclose_preview_window_after_completion=1
 let g:ycm_autoclose_preview_window_after_insertion=1
 let g:ycm_min_num_of_chars_for_completion=3
 let g:ycm_auto_hover=0
-
+nnoremap <F5> :YcmForceCompileAndDiagnostics<CR>
+nnoremap <leader>g :YcmCompleter GoTo<CR>
+nnoremap <leader>yi :YcmCompleter GoToInclude<CR>
+nnoremap <leader>yd :YcmCompleter GoToDeclaration<CR>
+nnoremap <leader>yf :YcmCompleter GoToDefinition<CR>
+nnoremap <leader>yr :YcmCompleter GoToReferences<CR>
+nnoremap <leader>yt :YcmCompleter GoToImplementation<CR>
+nnoremap <leader>ye :YcmCompleter GoToType<CR>
+nnoremap <leader>yg :YcmCompleter GetType<CR>
+vnoremap <leader>yF :YcmCompleter Format<CR>
 
 " **********************************************************
 " fzf
@@ -310,7 +319,7 @@ autocmd FileType c,cpp nnoremap <leader>c :call CurtineIncSw()<CR>
 " **********************************************************
 " goyo
 " **********************************************************
-nnoremap <leader>g :Goyo<CR>
+nnoremap <leader>z :Goyo<CR>
 
 function! s:goyo_enter()
     if executable('tmux') && strlen($TMUX)
