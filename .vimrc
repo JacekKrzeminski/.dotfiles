@@ -307,6 +307,33 @@ nnoremap <leader>a :Ag<CR>
 autocmd FileType c,cpp nnoremap <leader>c :call CurtineIncSw()<CR>
 
 
+" **********************************************************
+" goyo
+" **********************************************************
+nnoremap <leader>g :Goyo<CR>
+
+function! s:goyo_enter()
+    if executable('tmux') && strlen($TMUX)
+        silent !tmux set status off
+        silent !tmux list-panes -F '\#F' | grep -q Z || tmux resize-pane -Z
+    endif
+    set noshowmode
+    set noshowcmd
+endfunction
+
+function! s:goyo_leave()
+    if executable('tmux') && strlen($TMUX)
+        silent !tmux set status on
+        silent !tmux list-panes -F '\#F' | grep -q Z && tmux resize-pane -Z
+    endif
+    set showmode
+    set showcmd
+endfunction
+
+autocmd! User GoyoEnter nested call <SID>goyo_enter()
+autocmd! User GoyoLeave nested call <SID>goyo_leave()
+
+
 
 " **********************************************************
 " plug
@@ -321,6 +348,7 @@ Plug 'ericcurtin/CurtineIncSw.vim'
 Plug 'majutsushi/tagbar'
 Plug 'tpope/vim-commentary'
 Plug 'junegunn/seoul256.vim'
+Plug 'junegunn/goyo.vim'
 call plug#end()
 
 " Flag unnecessary whitespace.
