@@ -94,7 +94,6 @@ set laststatus=2
 syntax on
 set number
 set bg=dark
-colorscheme torte
 set gfn=Liberation\ Mono\ 11
 
 set termguicolors
@@ -321,6 +320,7 @@ Plug 'joe-skb7/cscope-maps'
 Plug 'ericcurtin/CurtineIncSw.vim'
 Plug 'majutsushi/tagbar'
 Plug 'tpope/vim-commentary'
+Plug 'junegunn/seoul256.vim'
 call plug#end()
 
 " Flag unnecessary whitespace.
@@ -338,3 +338,11 @@ fun! MatchBlanksToggle()
 endf
 
 au BufRead,BufNewFile,BufWritePost *.py,*.pyw,*.c,*.h,*.cc,*.cpp,*.hh,*.hpp :call MatchBlanksToggle()
+
+
+" **********************************************************
+" seoul256 color scheme
+" **********************************************************
+let g:seoul256_background = 233
+let g:seoul256_srgb = 1
+colorscheme seoul256
