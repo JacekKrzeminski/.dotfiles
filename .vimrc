@@ -293,11 +293,12 @@ nmap <leader>s :SyntasticReset<cr>
 " report errors, conflicts with syntastic
 " let g:ycm_show_diagnostics_ui = 0
 " called function signature help
+let g:ycm_show_diagnostics_ui = 0
 let g:ycm_add_preview_to_completeopt=1
 let g:ycm_autoclose_preview_window_after_completion=1
 let g:ycm_autoclose_preview_window_after_insertion=1
 let g:ycm_min_num_of_chars_for_completion=3
-let g:ycm_auto_hover=0
+let g:ycm_auto_hover=''
 nnoremap <F5> :YcmForceCompileAndDiagnostics<CR>
 nnoremap <leader>g :YcmCompleter GoTo<CR>
 nnoremap <leader>yi :YcmCompleter GoToInclude<CR>
@@ -308,6 +309,11 @@ nnoremap <leader>yt :YcmCompleter GoToImplementation<CR>
 nnoremap <leader>ye :YcmCompleter GoToType<CR>
 nnoremap <leader>yg :YcmCompleter GetType<CR>
 vnoremap <leader>yF :YcmCompleter Format<CR>
+" Let clangd fully control code completion
+" let g:ycm_clangd_uses_ycmd_caching = 0
+" Use installed clangd, not YCM-bundled clangd which doesn't get updates.
+" let g:ycm_clangd_binary_path = exepath("clangd")
+
 
 " **********************************************************
 " fzf
