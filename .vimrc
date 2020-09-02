@@ -385,7 +385,6 @@ colorscheme seoul256
 
 
 " Flag unnecessary whitespace.
-highlight BadWhitespace ctermbg=red guibg=red
 noremap <leader>m :call MatchBlanksToggle()<CR>
 
 fun! MatchBlanksToggle()
@@ -394,6 +393,7 @@ fun! MatchBlanksToggle()
         match none
     else
         let t:match_blanks = 1
+        highlight BadWhitespace ctermbg=red guibg=red
         match BadWhitespace /\s\+$/
     endif
 endf
