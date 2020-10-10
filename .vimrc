@@ -373,6 +373,7 @@ Plug 'junegunn/goyo.vim'
 Plug 'terryma/vim-expand-region'
 Plug 'tpope/vim-fugitive'
 Plug 'octol/vim-cpp-enhanced-highlight'
+" Plug 'jeetsukumaran/vim-pythonsense'
 call plug#end()
 
 
