@@ -299,6 +299,7 @@ let g:ycm_autoclose_preview_window_after_completion=1
 let g:ycm_autoclose_preview_window_after_insertion=1
 let g:ycm_min_num_of_chars_for_completion=3
 let g:ycm_auto_hover=''
+let g:ycm_complete_in_strings = 0
 nnoremap <F5> :YcmForceCompileAndDiagnostics<CR>
 nnoremap <leader>g :YcmCompleter GoTo<CR>
 nnoremap <leader>yi :YcmCompleter GoToInclude<CR>
