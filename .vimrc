@@ -253,7 +253,8 @@ set statusline=
 "set statusline+=%#LineNr#
 set statusline+=%n
 set statusline+=\ %f
-set statusline+=%m
+set statusline+=\ %{FugitiveStatusline()}
+set statusline+=\ %m
 set statusline+=%r
 set statusline+=%=
 set statusline+=%#CursorColumn#
