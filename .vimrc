@@ -1,3 +1,4 @@
+set secure
 "Stops vim from behaving in a strongly vi compatible way. 
 set nocompatible
 
