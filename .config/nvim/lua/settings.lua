@@ -1,0 +1,31 @@
+local opt = vim.opt
+
+opt.secure = true
+opt.confirm = true
+opt.showmatch = true
+opt.linebreak = true
+opt.foldmethod = indent
+opt.cindent = true
+opt.cinoptions = {":0", "b1" ,"g0", "+8", "(8" , "u2", "w1"}
+opt.tabstop = 4
+opt.shiftwidth = 4
+opt.expandtab = true
+opt.ignorecase = true
+opt.smartcase = true
+opt.number = true
+-- opt.relativenumber = true
+opt.bg = dark
+opt.mat = 2
+opt.scrolloff = 3
+opt.wildmode = {"list:longest", "full"}
+opt.wildignore = {"*.o", "*~", "*.pyc"}
+opt.backup = false
+opt.undofile = true
+opt.inccommand = "split"
+opt.termguicolors = true
+opt.signcolumn = "yes"
+opt.splitbelow = true
+opt.splitright = true
+opt.listchars = {"eol:$", "tab:>#", "space:-", "lead:.", "trail:~"}
+
+vim.g.netrw_browse_split = 4 -- open files in previous window
